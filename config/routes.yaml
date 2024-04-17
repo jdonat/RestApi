@@ -1,0 +1,33 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+listAllAnimals:
+    path: /animals
+    controller: App\Controller\AnimalsController::listAllAnimals
+    methods:    GET
+getAnimalById:
+    path: /animal/{id}
+    controller: App\Controller\AnimalsController::getAnimalById
+    methods:    GET
+listAllAnimalsByCountry:
+    path: /animals/{country}
+    controller: App\Controller\AnimalsController::listAllAnimalsByCountry
+    methods:    GET
+AddAnimal:
+    path: /animal
+    controller: App\Controller\AnimalsController::AddAnimal
+    methods:    POST
+updateAnimal:
+    path: /animal/{id}
+    controller: App\Controller\AnimalsController::updateAnimal
+    methods:    PUT
+updateAnimalCountry:
+    path: /animal/{id}
+    controller: App\Controller\AnimalsController::updateAnimalCountry
+    methods:    PATCH
+deleteAnimalById:
+    path: /animal/{id}
+    controller: App\Controller\AnimalsController::deleteAnimalById
+    methods:    DELETE
